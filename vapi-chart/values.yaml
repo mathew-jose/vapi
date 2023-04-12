@@ -160,7 +160,7 @@ mysql:
     ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
     ## ref: https://kubernetes.io/docs/user-guide/images/#pre-pulling-images
     ##
-    pullPolicy: IfNotPresent
+    pullPolicy: Always
     ## Optionally specify an array of imagePullSecrets (secrets must be manually created in the namespace)
     ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
     ## Example:
@@ -188,10 +188,10 @@ mysql:
     ## @param auth.username Name for a custom user to create
     ## ref: https://github.com/bitnami/bitnami-docker-mysql/blob/master/README.md#creating-a-database-user-on-first-run
     ##
-    username: "vapi_user"
+    username: "vapi"
     ## @param auth.password Password for the new user. Ignored if existing secret is provided
     ##
-    password: "vapipass"
+    password: "vapi123456"
     ## @param auth.replicationUser MySQL replication user
     ## ref: https://github.com/bitnami/bitnami-docker-mysql#setting-up-a-replication-cluster
     ##

@@ -9,10 +9,10 @@ COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
 
 COPY ./vapi /var/www/html/vapi
 
-RUN rm /var/www/html/vapi/.env
+# RUN rm /var/www/html/vapi/.env
 
 RUN echo "flag{ssrf_e0pgt3az9zeqdd4fhatc}" > /flag.txt
 
-RUN php /var/www/html/vapi/artisan config:cache
+RUN php /var/www/html/vapi/artisan config:clear
 
 CMD ["php","/var/www/html/vapi/artisan","serve","--host=0.0.0.0"]

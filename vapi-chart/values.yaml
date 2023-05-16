@@ -5,8 +5,8 @@
 replicaCount: 1
 
 image:
-  repository: gilbrea/vapi
-  pullPolicy: Always
+  repository: mathew-test
+  pullPolicy: Never
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
 
@@ -153,14 +153,14 @@ mysql:
   ##
   image:
     registry: docker.io
-    repository: piyushroshan/bitmysql
+    repository: mysql-test
     tag: latest
     debug: true
     ## Specify a imagePullPolicy
     ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
     ## ref: https://kubernetes.io/docs/user-guide/images/#pre-pulling-images
     ##
-    pullPolicy: Always
+    pullPolicy: Never
     ## Optionally specify an array of imagePullSecrets (secrets must be manually created in the namespace)
     ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
     ## Example:
